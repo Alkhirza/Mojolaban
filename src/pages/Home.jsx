@@ -36,10 +36,10 @@ export default function Home() {
 
       // ── Hero entrance ──────────────────────────
       const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
-      tl.from('.hero-badge',   { y: -20, opacity: 0, duration: 0.5 })
-        .from('.hero-title',   { y: 40,  opacity: 0, duration: 0.7 }, '-=0.2')
-        .from('.hero-desc',    { y: 30,  opacity: 0, duration: 0.6 }, '-=0.4')
-        .from('.hero-btns',    { y: 20,  opacity: 0, duration: 0.5 }, '-=0.3')
+      tl.from('.hero-badge', { y: -20, opacity: 0, duration: 0.5 })
+        .from('.hero-title', { y: 40, opacity: 0, duration: 0.7 }, '-=0.2')
+        .from('.hero-desc', { y: 30, opacity: 0, duration: 0.6 }, '-=0.4')
+        .from('.hero-btns', { y: 20, opacity: 0, duration: 0.5 }, '-=0.3')
 
       // ── Stats stagger ─────────────────────────
       gsap.from('.stat-card', {
@@ -119,7 +119,7 @@ export default function Home() {
         {/* Decorative wave bottom */}
         <div className="absolute bottom-0 left-0 right-0">
           <svg viewBox="0 0 1440 40" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-            <path d="M0 40L1440 40L1440 10C1200 35 960 0 720 20C480 40 240 5 0 25L0 40Z" fill="white" fillOpacity="0.06"/>
+            <path d="M0 40L1440 40L1440 10C1200 35 960 0 720 20C480 40 240 5 0 25L0 40Z" fill="white" fillOpacity="0.06" />
           </svg>
         </div>
       </section>
