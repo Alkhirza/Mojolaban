@@ -6,7 +6,7 @@ import SectionTitle from '../components/SectionTitle'
 import StatCard from '../components/StatCard'
 import { berita } from '../data/berita'
 import { layanan } from '../data/layanan'
-import { camat } from '../data/pejabat'
+
 import { gsap } from '../hooks/useGSAP'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -26,7 +26,7 @@ export default function Home() {
   // Refs for GSAP
   const heroRef = useRef(null)
   const statsRef = useRef(null)
-  const sambutanRef = useRef(null)
+
   const layananRef = useRef(null)
   const beritaRef = useRef(null)
   const petaRef = useRef(null)
@@ -47,15 +47,7 @@ export default function Home() {
         scrollTrigger: { trigger: statsRef.current, start: 'top 85%', toggleActions: 'play none none none' },
       })
 
-      // ── Sambutan reveal ──────────────────────
-      gsap.from('.sambutan-left', {
-        x: -50, opacity: 0, duration: 0.8, ease: 'power3.out',
-        scrollTrigger: { trigger: sambutanRef.current, start: 'top 80%', toggleActions: 'play none none none' },
-      })
-      gsap.from('.sambutan-right', {
-        x: 50, opacity: 0, duration: 0.8, ease: 'power3.out',
-        scrollTrigger: { trigger: sambutanRef.current, start: 'top 80%', toggleActions: 'play none none none' },
-      })
+
 
       // ── Layanan cards stagger ─────────────────
       gsap.from('.layanan-card', {
@@ -150,46 +142,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── SAMBUTAN CAMAT ───────────────────────────────── */}
-      <section ref={sambutanRef} className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="sambutan-left">
-              <SectionTitle
-                title="Sambutan Camat"
-                subtitle="Pesan dan harapan dari Camat Mojolaban untuk masyarakat"
-              />
-              <blockquote className="border-l-4 border-blue-900 pl-5 text-gray-600 italic text-lg leading-relaxed mb-6">
-                "Kami berkomitmen untuk terus meningkatkan kualitas pelayanan publik yang prima,
-                transparan, dan akuntabel. Mari bersama-sama membangun Kecamatan Mojolaban yang
-                sejahtera, maju, dan berbudaya."
-              </blockquote>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-900 font-bold">
-                  CM
-                </div>
-                <div>
-                  <p className="font-semibold text-gray-900">{camat.nama}</p>
-                  <p className="text-gray-500 text-sm">Camat Mojolaban</p>
-                </div>
-              </div>
-            </div>
-            <div className="sambutan-right bg-blue-50 rounded-2xl p-8">
-              <h3 className="font-bold text-blue-900 text-xl mb-4">Visi Kecamatan</h3>
-              <p className="text-gray-700 leading-relaxed text-sm mb-6">
-                Terwujudnya Masyarakat Kecamatan Mojolaban yang Sejahtera, Mandiri, dan Berbudaya
-                dalam Tata Kelola Pemerintahan yang Baik.
-              </p>
-              <Link
-                to="/profil"
-                className="inline-flex items-center gap-1.5 text-blue-700 font-medium text-sm hover:underline"
-              >
-                Lihat profil lengkap <ChevronRight size={16} />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* ── LAYANAN UNGGULAN ─────────────────────────────── */}
       <section ref={layananRef} className="py-16 bg-gray-50">

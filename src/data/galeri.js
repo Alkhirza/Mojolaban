@@ -1,11 +1,13 @@
 // src/data/galeri.js
+import kantorImg from '../assets/kantor.webp'
+
 export const galeri = [
   {
     id: 1,
     judul: "Kantor Kecamatan Mojolaban",
     kategori: "Fasilitas",
     deskripsi: "Tampak depan Kantor Kecamatan Mojolaban, pusat pelayanan administrasi masyarakat.",
-    src: null,
+    src: kantorImg,
     alt: "Gedung Kantor Kecamatan Mojolaban",
     tahun: 2024,
   },

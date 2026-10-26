@@ -10,7 +10,6 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function Profil() {
   const sejarahRef  = useRef(null)
-  const visiRef     = useRef(null)
   const geoRef      = useRef(null)
   const batasRef    = useRef(null)
 
@@ -20,9 +19,6 @@ export default function Profil() {
       gsap.from('.sejarah-box', { y: 40, opacity: 0, duration: 0.7, ease: 'power3.out',
         scrollTrigger: { trigger: sejarahRef.current, start: 'top 85%', toggleActions: 'play none none none' } })
 
-      // Visi Misi cards
-      gsap.from('.visi-card', { y: 40, opacity: 0, duration: 0.65, stagger: 0.15, ease: 'power3.out',
-        scrollTrigger: { trigger: visiRef.current, start: 'top 85%', toggleActions: 'play none none none' } })
 
       // Geo cards
       gsap.from('.geo-card', { y: 30, opacity: 0, scale: 0.96, duration: 0.5, stagger: 0.07, ease: 'back.out(1.4)',
@@ -53,33 +49,6 @@ export default function Profil() {
           </div>
         </section>
 
-        {/* Visi Misi */}
-        <section ref={visiRef}>
-          <SectionTitle title="Visi & Misi" />
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="visi-card bg-blue-900 text-white rounded-xl p-6 md:p-8">
-              <h3 className="font-bold text-xl mb-4 flex items-center gap-2">
-                <span className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-sm font-bold">V</span>
-                Visi
-              </h3>
-              <p className="text-blue-100 leading-relaxed text-lg italic">"{profil.visi}"</p>
-            </div>
-            <div className="visi-card bg-white rounded-xl border border-gray-100 shadow-sm p-6 md:p-8">
-              <h3 className="font-bold text-xl text-gray-900 mb-4 flex items-center gap-2">
-                <span className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-900 text-sm font-bold">M</span>
-                Misi
-              </h3>
-              <ol className="space-y-3">
-                {profil.misi.map((m, i) => (
-                  <li key={i} className="flex items-start gap-3 text-gray-700 text-sm">
-                    <span className="w-6 h-6 rounded-full bg-blue-900 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">{i + 1}</span>
-                    {m}
-                  </li>
-                ))}
-              </ol>
-            </div>
-          </div>
-        </section>
 
         {/* Letak Geografis */}
         <section ref={geoRef}>
