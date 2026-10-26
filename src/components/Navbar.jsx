@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { Menu, X, ChevronDown } from 'lucide-react'
+import logoSvg from '../assets/logo.svg'
 
 const navLinks = [
   { to: '/', label: 'Beranda' },
@@ -41,9 +42,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo & Brand */}
           <Link to="/" className="flex items-center gap-3 shrink-0">
-            <div className="w-10 h-10 bg-blue-900 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0">
-              MJL
-            </div>
+            <img src={logoSvg} alt="Logo Kecamatan Mojolaban" className="w-10 h-10 object-contain shrink-0" />
             <div className="hidden sm:block">
               <p className="font-bold text-blue-900 leading-tight text-sm">Kecamatan Mojolaban</p>
               <p className="text-gray-500 text-xs leading-tight">Kabupaten Sukoharjo</p>

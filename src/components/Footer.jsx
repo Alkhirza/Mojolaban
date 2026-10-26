@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { MapPin, Phone, Mail, Clock, ExternalLink } from 'lucide-react'
+import logoSvg from '../assets/logo.svg'
 
 export default function Footer() {
   return (
@@ -10,9 +11,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-900 font-bold text-sm">
-                MJL
-              </div>
+              <img src={logoSvg} alt="Logo Kecamatan Mojolaban" className="w-10 h-10 object-contain shrink-0" />
               <div>
                 <p className="font-bold text-white">Kec. Mojolaban</p>
                 <p className="text-blue-300 text-xs">Kab. Sukoharjo</p>
@@ -94,7 +93,36 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-blue-800 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-blue-400">
+        {/* Tim Pengembang */}
+        <div className="border-t border-blue-800 mt-10 pt-8">
+          <p className="text-center text-blue-300 text-xs font-semibold uppercase tracking-widest mb-6">
+            Tim Pengembang — Kelompok 5
+          </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            {[
+              { nim: 'L0124014', nama: 'Fairuz Siba Alkhirza' },
+              { nim: 'L0124127', nama: 'Muhammad Daffa Ade Nugraha' },
+              { nim: 'L0124025', nama: 'Muhammad Yahya Saputra' },
+              { nim: 'L0124139', nama: 'Nurman Aqil Wicaksono' },
+              { nim: 'L0124064', nama: 'Muhammad Rafael Alfahrizal Daisuke' },
+            ].map((dev) => (
+              <div
+                key={dev.nim}
+                className="flex items-center gap-2.5 bg-blue-900/50 border border-blue-800 rounded-full px-4 py-2"
+              >
+                <div className="w-7 h-7 rounded-full bg-blue-700 flex items-center justify-center text-white font-bold text-xs shrink-0">
+                  {dev.nama.charAt(0)}
+                </div>
+                <div className="leading-tight">
+                  <p className="text-white text-xs font-medium">{dev.nama}</p>
+                  <p className="text-blue-400 text-[10px]">{dev.nim}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="border-t border-blue-800 mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-blue-400">
           <p>© {new Date().getFullYear()} Kecamatan Mojolaban – Kabupaten Sukoharjo. Semua hak cipta dilindungi.</p>
           <p>Dibangun dengan React + Vite + Tailwind CSS</p>
         </div>
