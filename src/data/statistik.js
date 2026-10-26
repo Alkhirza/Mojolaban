@@ -13,18 +13,18 @@ export const statistik = {
 
   kk: 32126,
 
-  kepadatan: null,
+  kepadatan: 2628,
 
   luas: "35,52 km²",
 
   jumlahDesa: 15,
 
   mataPencaharian: [
-    { kategori: "Pertanian", jumlah: null },
-    { kategori: "Industri / Manufaktur", jumlah: null },
-    { kategori: "Perdagangan", jumlah: null },
-    { kategori: "Jasa / PNS / TNI-Polri", jumlah: null },
-    { kategori: "Lainnya", jumlah: null },
+    { kategori: "Pertanian", jumlah: null, deskripsi: "Sektor terbesar masyarakat pedesaan (>60% luas lahan adalah sawah irigasi teknis)." },
+    { kategori: "Industri Pengolahan / Kerajinan", jumlah: null, deskripsi: "Sentra gamelan (Wirun & Laban), industri etanol/alkohol tradisional (Bekonang), batik, dan kerajinan kayu." },
+    { kategori: "Perdagangan & Jasa", jumlah: null, deskripsi: "Terkonsentrasi di kawasan komersial Palur dan Pasar Bekonang." },
+    { kategori: "Karyawan Swasta & ASN", jumlah: null, deskripsi: "Terutama di desa-desa yang berbatasan langsung dengan Kota Surakarta (Palur, Triyagan, Dukuh)." },
+    { kategori: "Lainnya", jumlah: null, deskripsi: "Sektor lain yang belum terklasifikasi." },
   ],
 
   pendidikan: [

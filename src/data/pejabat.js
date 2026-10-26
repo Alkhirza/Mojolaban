@@ -2,20 +2,20 @@
 export const camat = {
   nama: "Sriyadi, S.E.",
   jabatan: "Camat Mojolaban",
-  nip: null,
+  nip: "19680324 198903 1 004",
   foto: null,
 }
 
 export const pejabat = [
   {
-    nama: null,
+    nama: "Djoko Windarto, S.STP, M.H.",
     jabatan: "Sekretaris Kecamatan",
-    nip: null,
+    nip: "(SK Pemkab Sukoharjo)",
   },
   {
-    nama: null,
+    nama: "Hernowo Subakdo, A.Md.",
     jabatan: "Kepala Seksi Pemerintahan",
-    nip: null,
+    nip: "19650905 199203 1 011",
   },
   {
     nama: null,
@@ -38,14 +38,14 @@ export const pejabat = [
     nip: null,
   },
   {
-    nama: null,
+    nama: "Sri Mulyaningsih, S.E.",
     jabatan: "Kepala Sub Bagian Perencanaan & Keuangan",
-    nip: null,
+    nip: "19611106 198409 2 002",
   },
   {
-    nama: null,
+    nama: "Sri Lestari, S.E., M.M.",
     jabatan: "Kepala Sub Bagian Umum & Kepegawaian",
-    nip: null,
+    nip: "19780422 199903 2 003",
   },
 ]
 
